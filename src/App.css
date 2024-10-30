@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  display: flex;/* No quotes around 'sticky' */
+  justify-content: center;
+  float: right; /* `float` and `flexbox` might conflict; you may not need both */
+  padding: 0;
+  height: 100vh; /* Sets the minimum height to full viewport height */
+  min-width: 100vw;  /* For full viewport width, use vw instead of vh */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://getwallpapers.com/wallpaper/full/5/1/b/699748-best-las-vegas-wallpaper-2560x1600-for-macbook.jpg');
+ }
+
+ .p {
+  color: #ff6200;
+ }
+
+ 
+ button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color #176fec;
+  border: "1px solid #2572d7";
+  background-color: #f56708
+}
+
+.home-btn {
+  background-color: #f56708;
+  color: white;
+}
+
+.About-btn {
+  background-color: #f56708;
+  color: white;
+
+}
+
+.Training-btn {
+  background-color: #f56708;
+  color: white;
+}
+
+/* Hover effect */
+button:hover {
+  color: #176fec;
+}
+
+  
+  
+  .card-container {
+    overflow: scroll;
+    display: inline;
+    flex-wrap: wrap;
+    height: 391; /* Zorgt ervoor dat de kaarten automatisch naar een nieuwe regel gaan als er geen ruimte meer is */
+    gap: 20px; /* Ruimte tussen de kaarten */
+    justify-content: space-between; /* Verdeel kaarten gelijkmatig over de ruimte */
+    padding: 20px; /* Ruimte rondom de container */
+  }
+  
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f96c30;
+    border: 3px solid #176fec;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(1, 165, 241);
+    margin: 10px;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in
+  }
+
+  .marker {
+    background-color: #fff; 
+    border: 2px solid #0e78d4; 
+    border-radius: 50%; 
+    width: 30px; /* Width of the marker */
+    height: 30px; /* Height of the marker */
+    display: flex; 
+    justify-content: center; /* Centering the icon horizontally */
+    align-items: center; /* Centering the icon vertically */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative; 
+  }
+  
+  /* Add a tooltip */
+  .marker:hover::after {
+    content: attr(data-tooltip); 
+    position: absolute; 
+    bottom: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #031e3a; 
+    color: #f56708; 
+    padding: 5px; 
+    border-radius: 4px; 
+    white-space: nowrap; 
+    z-index: 10; 
+    opacity: 0; 
+    transition: opacity 0.2s ease; 
+  }
+  
+ 
+  .marker:hover::after {
+    opacity: 1; 
+  }
+
+ 
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #0aedf1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+  }
+
+
+
+
+
+
+
+
+
+  
