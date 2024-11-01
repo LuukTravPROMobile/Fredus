@@ -1,11 +1,10 @@
-import { GoogleMap, useJsApiLoader, Marker, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import React from "react";
 
-const libraries = ['places'];
 const mapContainerStyle = {
-  width: '700px',
+  width: "700px",
   // height: '2000px',
-  float: 'left',
+  float: "left",
 };
 
 const defaultCenter = {
@@ -18,11 +17,11 @@ const createPositionMarker = (lat, lng) => {
     lat: Number(lat),
     lng: Number(lng),
   };
-}
+};
 
 const AddressMap = ({ hotels }) => {
   console.log(hotels);
-  
+
   return (
     <LoadScript googleMapsApiKey="AIzaSyBpfyrBMTrgHH3YnaGHxfjEN_w7OXBJoqc">
       <GoogleMap
@@ -32,12 +31,15 @@ const AddressMap = ({ hotels }) => {
       >
         {hotels.map((hotel, index) => {
           // Create position marker for each hotel
-          const position = createPositionMarker(hotel.latitude, hotel.longitude);
+          const position = createPositionMarker(
+            hotel.latitude,
+            hotel.longitude
+          );
           return (
             <Marker
               key={index}
               position={position} // Use position directly
-              label={String(index +1)}
+              label={String(index + 1)}
             />
           );
         })}
@@ -47,3 +49,5 @@ const AddressMap = ({ hotels }) => {
 };
 
 export default AddressMap;
+
+
